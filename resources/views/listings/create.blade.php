@@ -117,6 +117,7 @@
               type="file"
               class="border border-gray-200 rounded p-2 w-full"
               name="logo"
+							value="{{old('logo')}}"
           />
           @error('logo')
             <p class="text-red-500 text-xs mt-1">{{$message}}</p>
@@ -127,7 +128,6 @@
           <label
               for="description"
               class="inline-block text-lg mb-2"
-              value="{{old('description')}}"
           >
               Job Description
           </label>
@@ -136,9 +136,10 @@
               name="description"
               rows="10"
               placeholder="Include tasks, requirements, salary, etc"
+            	value="{{old('description')}}"
           ></textarea>
           @error('description')
-          <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+            <p class="text-red-500 text-xs mt-1">{{$message}}</p>
           @enderror()
       </div>
 
